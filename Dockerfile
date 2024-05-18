@@ -17,4 +17,4 @@ COPY requirements/base.txt .
 RUN pip install -r base.txt
 
 # Copy project
-COPY library_api .
+COPY . .
