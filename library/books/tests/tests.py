@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
 
-from library_api.library.authors.models import Author
+from library.authors.models import Author
 from ..models import Book
 
 
