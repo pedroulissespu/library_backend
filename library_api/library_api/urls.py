@@ -14,7 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path, include
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -23,12 +23,20 @@ from rest_framework_simplejwt.views import (
 from django.contrib import admin
 from django.urls import path, include
 
+API_PREFIX = "api/v1/"
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/books/', include('library.books.urls')),
-    path('api/authors/', include('library.authors.urls')),
-    path('api/auth/', include('rest_framework.urls')),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+    path(f"{API_PREFIX}admin/", admin.site.urls),
+    path(f"{API_PREFIX}books/", include('library.books.api.urls')),
+    path(f"{API_PREFIX}authors/", include('library.authors.urls')),
+    path(f"{API_PREFIX}auth/", include('rest_framework.urls')),
+    path(f"{API_PREFIX}token/", TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path(f"{API_PREFIX}token/refresh/", TokenRefreshView.as_view(), name='token_refresh'),
+    path(f"{API_PREFIX}token/verify/", TokenVerifyView.as_view(), name='token_verify'),
+    path(f"{API_PREFIX}schema/", SpectacularAPIView.as_view(), name="api-schema"),
+    path(
+        f"{API_PREFIX}docs/",
+        SpectacularSwaggerView.as_view(url_name="api-schema"),
+        name="api-docs",
+    ),
 ]

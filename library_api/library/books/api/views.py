@@ -1,9 +1,9 @@
-from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import Book
+
 from .serializers import BookSerializer
+from ..models import Book
 
 
 class BookViewSet(viewsets.ModelViewSet):
