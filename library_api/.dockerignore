@@ -1,0 +1,13 @@
+# Ignore venv
+.venv
+.venv/
+
+# Ignore .git
+.git
+
+# Ignore .gitignore
+.gitignore
+
+# Ignore .idea
+.idea
+.idea/

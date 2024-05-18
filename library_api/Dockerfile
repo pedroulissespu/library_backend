@@ -1,18 +1,20 @@
-# Dockerfile
+# Pull base image
+FROM python:3.11.5-slim-bullseye
 
-FROM python:3.11-slim
+# Set environment variables
+ENV PIP_DISABLE_PIP_VERSION_CHECK 1
+# PIP_DISABLE_PIP_VERSION_CHECK turns off an automatic check for pip updates each time
+ENV PYTHONDONTWRITEBYTECODE 1
+# PYTHONDONTWRITEBYTECODE means Python will not try to write .pyc files
+ENV PYTHONUNBUFFERED 1
+# PYTHONUNBUFFERED ensures Docker does not buffer our console output
 
+# Set work directory
 WORKDIR /app
 
+# Install dependencies
 COPY requirements/base.txt .
+RUN pip install -r base.txt
 
-RUN python -m venv /opt/venv
-
-RUN /opt/venv/bin/pip install --upgrade pip && \
-    /opt/venv/bin/pip install --no-cache-dir -r base.txt
-
-ENV PATH="/opt/venv/bin:$PATH"
-
+# Copy project
 COPY . .
-
-CMD ["gunicorn", "--bind", ":8000", "library_api.wsgi:application"]
