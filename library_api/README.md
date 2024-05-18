@@ -10,7 +10,7 @@
 1. Clone the repository:
     ```sh
    git clone (botar o repositorio aqui depois)
-   cd library_api
+   cd config
    ```
 
 2. Build and start the Docker containers:

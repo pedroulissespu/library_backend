@@ -1,5 +1,5 @@
 """
-URL configuration for library_api project.
+URL configuration for config project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -28,7 +28,7 @@ API_PREFIX = "api/v1/"
 urlpatterns = [
     path(f"{API_PREFIX}admin/", admin.site.urls),
     path(f"{API_PREFIX}books/", include('library.books.api.urls')),
-    path(f"{API_PREFIX}authors/", include('library.authors.urls')),
+    path(f"{API_PREFIX}authors/", include('library.authors.api.urls')),
     path(f"{API_PREFIX}auth/", include('rest_framework.urls')),
     path(f"{API_PREFIX}token/", TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path(f"{API_PREFIX}token/refresh/", TokenRefreshView.as_view(), name='token_refresh'),
