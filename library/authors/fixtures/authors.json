@@ -1,0 +1,18 @@
+[
+    {
+        "model": "authors.author",
+        "pk": 1,
+        "fields": {
+            "name": "Author One",
+            "birthdate": "1970-01-01"
+        }
+    },
+    {
+        "model": "authors.author",
+        "pk": 2,
+        "fields": {
+            "name": "Author Two",
+            "birthdate": "1980-01-01"
+        }
+    }
+]
