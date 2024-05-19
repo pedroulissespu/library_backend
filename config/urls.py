@@ -1,5 +1,4 @@
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
-from rest_framework.routers import APIRootView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -13,7 +12,7 @@ from library.users.api.views import UserCreate
 API_PREFIX = "api/v1/"
 
 urlpatterns = [
-    path(f"{API_PREFIX}", APIRootView.as_view(), name="api-root"),
+    path(f"{API_PREFIX}", include("config.api_router"), name="api-root"),
     path(f"admin/", admin.site.urls),
     path(f"{API_PREFIX}users/", UserCreate.as_view(), name="user_create"),
     path(f"{API_PREFIX}books/", include('library.books.api.urls')),

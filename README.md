@@ -105,7 +105,7 @@ To stop the container, just issue the following command:
    ```
 
 6. Access the application:
-    - API: `http://localhost:8000/api/v1/`
+    - API: `http://0.0.0.0:8000/api/v1/`
     - Swagger: `http://0.0.0.0:8000/api/v1/docs/`
 
 ## Running Tests
