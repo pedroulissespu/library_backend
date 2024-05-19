@@ -9,7 +9,7 @@
 
 1. Clone the repository:
     ```sh
-   git clone (botar o repositorio aqui depois)
+   git clone https://github.com/pedroulissespu/library_backend
    cd config
    ```
 
