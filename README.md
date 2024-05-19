@@ -61,16 +61,6 @@ To install Pyenv and its dependencies, I will leave the installation link for th
 1. https://github.com/pyenv/pyenv/wiki#suggested-build-environment
 2. https://github.com/pyenv/pyenv?tab=readme-ov-file#getting-pyenv
 
-## Configuring Pyenv and Setting up pre-commit locally
-```shell
-pyenv install 3.12.0
-pyenv virtualenv 3.12.0 library_api
-pyenv activate library_api
-
-pip install -r requirements/base.txt
-pre-commit install --allow-missing-config
-```
-
 ## Installation
 
 1. Clone the repository:
@@ -79,32 +69,43 @@ pre-commit install --allow-missing-config
    cd library_backend
    ```
 
-2. Build and start the Docker containers:
+2. Configuring Pyenv and Setting up pre-commit locally
+   ```shell
+   pyenv install 3.12.0
+   pyenv virtualenv 3.12.0 library_api
+   pyenv activate library_api
+   
+   pip install -r requirements/base.txt
+   pre-commit install --allow-missing-config
+   ```
+
+
+3. Build and start the Docker containers:
     ```sh
    ./utility/build_docker.sh
    ```
    
 To stop the container, just issue the following command:
-   ```sh
-   ./utility/stop_docker.sh
-   ```
+      ```
+      ./utility/stop_docker.sh
+      ```
 
-3. Make migrations and apply:
+4. Make migrations and apply:
     ```sh
    ./utility/migrations_docker.sh
    ```
    
-4. Load initial data fixtures:
+5.  Load initial data fixtures:
     ```sh
     ./utility/load_data.sh
     ```
    
-5. Create Super User:
+6. Create Super User:
    ```sh
    ./utility/createsuperuser.sh
    ```
 
-6. Access the application:
+7. Access the application:
     - API: `http://0.0.0.0:8000/api/v1/`
     - Swagger: `http://0.0.0.0:8000/api/v1/docs/`
 
@@ -136,3 +137,7 @@ To stop the container, just issue the following command:
 - Obtain Token: `POST /api/v1/token/`
 - Refresh Token: `POST /api/v1/token/refresh/`
 - Verify Token: `POST /api/v1/token/verify/`
+
+## User Registration
+
+- `/api/v1/users/`
