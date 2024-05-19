@@ -43,11 +43,13 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "drf_spectacular",
+    "django_extensions",
 ]
 
 LOCAL_APPS = [
     "library.books",
     "library.authors",
+    "library.users",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

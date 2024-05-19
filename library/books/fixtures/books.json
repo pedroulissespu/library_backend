@@ -4,7 +4,10 @@
         "pk": 1,
         "fields": {
             "title": "Book One",
-            "publication_date": "2000-01-01",
+            "published_date": "2000-01-01",
+            "isbn": "123456789",
+            "page_count": 1000,
+            "language": "en",
             "author": 1
         }
     },
@@ -13,8 +16,71 @@
         "pk": 2,
         "fields": {
             "title": "Book Two",
-            "publication_date": "2010-01-01",
-            "author": 2
+            "published_date": "2010-01-01",
+            "author": 2,
+            "isbn": "123456780",
+            "page_count": 590,
+            "language": "pt"
+        }
+    },
+        {
+        "model": "books.book",
+        "pk": 3,
+        "fields": {
+            "title": "Book Three",
+            "published_date": "2010-01-01",
+            "author": 3,
+            "isbn": "123456780",
+            "page_count": 590,
+            "language": "pt"
+        }
+    },
+        {
+        "model": "books.book",
+        "pk": 4,
+        "fields": {
+            "title": "Book Four",
+            "published_date": "2010-01-01",
+            "author": 4,
+            "isbn": "123456780",
+            "page_count": 590,
+            "language": "pt"
+        }
+    },
+        {
+        "model": "books.book",
+        "pk": 5,
+        "fields": {
+            "title": "Book Five",
+            "published_date": "2010-01-01",
+            "author": 5,
+            "isbn": "123456780",
+            "page_count": 590,
+            "language": "pt"
+        }
+    },
+        {
+        "model": "books.book",
+        "pk": 6,
+        "fields": {
+            "title": "Book Six",
+            "published_date": "2010-01-01",
+            "author": 6,
+            "isbn": "123456780",
+            "page_count": 590,
+            "language": "pt"
+        }
+    },
+        {
+        "model": "books.book",
+        "pk": 7,
+        "fields": {
+            "title": "Book Seven",
+            "published_date": "2010-01-01",
+            "author": 7,
+            "isbn": "123456780",
+            "page_count": 590,
+            "language": "pt"
         }
     }
 ]

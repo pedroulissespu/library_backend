@@ -3,16 +3,63 @@
         "model": "authors.author",
         "pk": 1,
         "fields": {
-            "name": "Author One",
-            "birthdate": "1970-01-01"
+            "first_name": "Author",
+            "last_name": "One",
+            "birth_date": "1980-01-01"
         }
     },
     {
         "model": "authors.author",
         "pk": 2,
         "fields": {
-            "name": "Author Two",
-            "birthdate": "1980-01-01"
+            "first_name": "Author",
+            "last_name": "Two",
+            "birth_date": "1980-01-01"
+        }
+    },
+        {
+        "model": "authors.author",
+        "pk": 3,
+        "fields": {
+            "first_name": "Author",
+            "last_name": "Three",
+            "birth_date": "1980-01-01"
+        }
+    },
+        {
+        "model": "authors.author",
+        "pk": 4,
+        "fields": {
+            "first_name": "Author",
+            "last_name": "Four",
+            "birth_date": "1980-01-01"
+        }
+    },
+        {
+        "model": "authors.author",
+        "pk": 5,
+        "fields": {
+            "first_name": "Author",
+            "last_name": "Five",
+            "birth_date": "1980-01-01"
+        }
+    },
+        {
+        "model": "authors.author",
+        "pk": 6,
+        "fields": {
+            "first_name": "Author",
+            "last_name": "Two",
+            "birth_date": "1980-01-01"
+        }
+    },
+        {
+        "model": "authors.author",
+        "pk": 7,
+        "fields": {
+            "first_name": "Author",
+            "last_name": "Six",
+            "birth_date": "1980-01-01"
         }
     }
 ]
