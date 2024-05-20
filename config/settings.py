@@ -50,6 +50,7 @@ LOCAL_APPS = [
     "library.books",
     "library.authors",
     "library.users",
+    "library.borrow"
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -100,7 +101,7 @@ DATABASES = {
         'NAME': 'library_db',
         'USER': 'library_admin',
         'PASSWORD': 'library123',
-        'HOST': 'db',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }

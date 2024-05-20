@@ -1,19 +1,9 @@
 version: '3'
 
 services:
-  web:
-    build:
-      context: ..
-      dockerfile: compose/Dockerfile
-    command: python /app/manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/compose/app
-    ports:
-      - '8000:8000'
-    depends_on:
-      - db
   db:
     image: postgres:latest
+    container_name: postgres_db
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
@@ -21,6 +11,8 @@ services:
       - "POSTGRES_USER=library_admin"
       - "POSTGRES_PASSWORD=library123"
       - "POSTGRES_DB=library_db"
+    ports:
+      - "5432:5432"
 
 volumes:
   postgres_data:

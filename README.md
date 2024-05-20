@@ -90,17 +90,21 @@ To stop the container, just issue the following command:
       ./utility/stop_docker.sh
       ```
 
-4. Make migrations and apply:
+## Make migrations and apply:
+1. Run the following script with the container turned off:
     ```sh
    ./utility/migrations_docker.sh
    ```
-   
-5.  Load initial data fixtures:
+
+## Load initial data fixtures
+
+1.  Load initial data fixtures with the following script and with the container turned off :
     ```sh
     ./utility/load_data.sh
     ```
    
-6. Create Super User:
+## Create Super User:
+1. You can create a super user with the container connected with the following script:
    ```sh
    ./utility/createsuperuser.sh
    ```
