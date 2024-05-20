@@ -16,3 +16,9 @@ uritemplate==4.1.1 # https://github.com/python-hyper/uritemplate
 drf-spectacular==0.27.1 # https://github.com/tfranzel/drf-spectacular
 pre-commit==3.3.1 # https://github.com/pre-commit/pre-commit
 django-extensions==3.2.3 # https://github.com/django-extensions/django-extensions
+pylint==3.2.2
+black==24.3.0
+trim==0.3
+end-of-file==1.1.0
+yamllint==.1.35.1
+check-added-large-files==

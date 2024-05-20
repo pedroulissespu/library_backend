@@ -1,33 +1,10 @@
 repos:
-  - repo: local
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
     hooks:
-      - id: pylint
-        name: pylint
-        entry: pylint
-        language: system
-        types: [python]
-      - id: black
-        name: black
-        entry: black
-        language: system
-        types: [python]
-      - id: trailing-whitespace
-        name: trailing-whitespace
-        entry: trailing-whitespace
-        language: system
-        types: [ python ]
-      - id: end-of-file-fixer
-        name: end-of-file-fixer
-        entry: end-of-file-fixer
-        language: system
-        types: [ python ]
-      - id: check-yaml
-        name: check-yaml
-        entry: check-yaml
-        language: system
-        types: [ python ]
-      - id: check-added-large-files
-        name: check-added-large-files
-        entry: check-added-large-files
-        language: system
-        types: [ python ]
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
+    -   id: end-of-file-fixer
+    -   id: check-added-large-files
