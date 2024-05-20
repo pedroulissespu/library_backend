@@ -10,37 +10,37 @@
 ## Python Installation
 
 ### For Windows : https://www.python.org/downloads/
-### For Linux Systems : 
-#### Ubuntu/Debian : 
+### For Linux Systems :
+#### Ubuntu/Debian :
    ```sh
    sudo apt install python3
    ```
-#### CentOS / RHEL : 
+#### CentOS / RHEL :
    ```sh
    sudo yum install python3
    ```
 
-#### CentOS / RHEL with DNF: 
+#### CentOS / RHEL with DNF:
    ```sh
    sudo dnf install python3
    ```
 
-#### Fedora : 
+#### Fedora :
    ```sh
    sudo dnf install python3
    ```
 
-#### openSUSE : 
+#### openSUSE :
    ```sh
    sudo zypper install python3
    ```
 
-#### Arch Linux : 
+#### Arch Linux :
    ```sh
    sudo pacman -S  python3
    ```
 
-#### Alpine Linux : 
+#### Alpine Linux :
    ```sh
    apk add python3
    ```
@@ -74,7 +74,7 @@ To install Pyenv and its dependencies, I will leave the installation link for th
    pyenv install 3.12.0
    pyenv virtualenv 3.12.0 library_api
    pyenv activate library_api
-   
+
    pip install -r requirements/base.txt
    pre-commit install --allow-missing-config
    ```
@@ -84,7 +84,7 @@ To install Pyenv and its dependencies, I will leave the installation link for th
     ```sh
    ./utility/build_docker.sh
    ```
-   
+
 To stop the container, just issue the following command:
       ```
       ./utility/stop_docker.sh
@@ -102,7 +102,7 @@ To stop the container, just issue the following command:
     ```sh
     ./utility/load_data.sh
     ```
-   
+
 ## Create Super User:
 1. You can create a super user with the container connected with the following script:
    ```sh
@@ -122,6 +122,7 @@ To stop the container, just issue the following command:
 
 ## API Endpoints
 
+### Books
 - `GET /api/v1/books/`
 - `POST /api/v1/books/`
 - `GET /api/v1/books/<id>/`
@@ -129,12 +130,21 @@ To stop the container, just issue the following command:
 - `PATCH /api/v1/books/<id>/`
 - `DELETE /api/v1/books/<id>/`
 
+### Authors
 - `GET /api/v1/authors/`
 - `POST /api/v1/authors/`
 - `GET /api/v1/authors/<id>/`
 - `PUT /api/v1/authors/<id>/`
 - `PATCH /api/v1/authors/<id>/`
 - `DELETE /api/v1/authors/<id>/`
+
+### Borrow
+- `GET /api/v1/borrow/`
+- `POST /api/v1/borrow/`
+- `GET /api/v1/borrow/<id>/`
+- `PUT /api/v1/borrow/<id>/`
+- `PATCH /api/v1/borrow/<id>/`
+- `DELETE /api/v1/borrow/<id>/`
 
 ## Authentication
 
