@@ -7,5 +7,7 @@ PYTHON_MANAGE_DIR="$SCRIPT_DIR/.."
 cd "$PYTHON_MANAGE_DIR" || exit
 python manage.py loaddata library/authors/fixtures/authors.json
 python manage.py loaddata library/books/fixtures/books.json
+python manage.py loaddata library/users/fixtures/users.json
+python manage.py loaddata library/borrow/fixtures/borrows.json
 cd "$COMPOSE_DIR" || exit
 docker-compose -f postgres.yml down

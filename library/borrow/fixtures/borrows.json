@@ -1,0 +1,72 @@
+[
+    {
+        "model": "borrow.borrow",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "book": 1,
+            "borrow_date": "2023-01-01",
+            "return_date": "2023-01-10"
+        }
+    },
+    {
+        "model": "borrow.borrow",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "book": 2,
+            "borrow_date": "2023-02-01",
+            "return_date": "2023-02-10"
+        }
+    },
+    {
+        "model": "borrow.borrow",
+        "pk": 3,
+        "fields": {
+            "user": 2,
+            "book": 1,
+            "borrow_date": "2023-03-01",
+            "return_date": "2023-03-10"
+        }
+    },
+    {
+        "model": "borrow.borrow",
+        "pk": 4,
+        "fields": {
+            "user": 2,
+            "book": 3,
+            "borrow_date": "2023-04-01",
+            "return_date": null
+        }
+    },
+    {
+        "model": "borrow.borrow",
+        "pk": 5,
+        "fields": {
+            "user": 3,
+            "book": 2,
+            "borrow_date": "2023-05-01",
+            "return_date": null
+        }
+    },
+    {
+        "model": "borrow.borrow",
+        "pk": 6,
+        "fields": {
+            "user": 3,
+            "book": 3,
+            "borrow_date": "2023-06-01",
+            "return_date": "2023-06-15"
+        }
+    },
+    {
+        "model": "borrow.borrow",
+        "pk": 7,
+        "fields": {
+            "user": 1,
+            "book": 3,
+            "borrow_date": "2023-07-01",
+            "return_date": null
+        }
+    }
+]
